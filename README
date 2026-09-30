@@ -1,0 +1,29 @@
+# Análisis de costos de seguros médicos con KNIME
+
+Análisis exploratorio (EDA) de un dataset de seguros médicos hecho en KNIME, para entender qué factores influyen en el costo del seguro.
+
+**Dataset:** [Insurance (Kaggle)](https://www.kaggle.com/datasets/mohamedelaziz/insurance) · 3255 registros y 7 variables (edad, sexo, BMI, hijos, fumador, región y costo del seguro).
+
+## Qué hice
+
+- **Perfilado:** estadísticas descriptivas de las variables numéricas y categóricas.
+- **Calidad de datos:** corregí un error de tipeo en región ("souteast" → "southeast", 86 registros), eliminé los duplicados (quedaron 1346 registros) y borré 9 registros con costo nulo.
+- **Transformaciones:** creé la columna `fumador_obeso` (fumador con BMI mayor a 30) y discreticé BMI (categorías OMS) y edad (18-29, 30-49, 50-64).
+- **Visualización:** histograma de costos, costo promedio por región y sexo, dispersión BMI vs. costo y comparación fumadores vs. no fumadores.
+
+## Gráficos
+
+
+
+## Conclusiones
+
+- El costo tiene una distribución asimétrica hacia la derecha: muchos costos bajos y pocos muy altos (media 13208 vs. mediana 9414).
+- **Fumar es el factor con más peso:** los fumadores pagan en promedio 32050 contra 8440 de los no fumadores.
+- Un BMI alto aumenta la posibilidad de un costo elevado, pero la correlación es débil (0.198).
+- La región y el sexo casi no influyen en el costo.
+
+## Cómo ejecutarlo
+
+1. Descargar el `.knwf` de este repositorio.
+2. En KNIME: File > Import KNIME Workflow.
+3. Ajustar la ruta del dataset en el nodo de lectura y ejecutar.
