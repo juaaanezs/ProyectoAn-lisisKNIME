@@ -13,9 +13,26 @@ Análisis exploratorio (EDA) de un dataset de seguros médicos hecho en KNIME, p
 
 ## Gráficos
 
+### Distribución del costo del seguro
+
 ![Histograma de charges](histograma.png)
 
 La mayoría de los asegurados tiene costos bajos y unos pocos con costos muy altos elevan el promedio. Por eso la media (13208) es mayor que la mediana (9414).
+
+### Fumadores vs. no fumadores
+
+![Costo promedio según fumador](costofumador.png)
+
+Es la diferencia más marcada del análisis: los fumadores pagan en promedio 32050 contra 8440 de los no fumadores.
+
+### BMI vs. costo
+
+![Dispersión BMI vs charges](relacionbmiseguro.png)
+
+Los costos más altos (más de 30000) aparecen con BMI de 30 o más, pero la mayoría de las personas está por debajo de 10000 sin importar su BMI. La correlación lineal es de 0.198: positiva pero débil.
+
+
+
 
 
 
