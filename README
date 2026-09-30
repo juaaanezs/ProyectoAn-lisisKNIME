@@ -13,6 +13,9 @@ Análisis exploratorio (EDA) de un dataset de seguros médicos hecho en KNIME, p
 
 ## Gráficos
 
+![Histograma de charges](histograma.png)
+La mayoría de los asegurados tiene costos bajos y unos pocos con costos muy altos elevan el promedio. Por eso la media (13208) es mayor que la mediana (9414).
+
 
 
 ## Conclusiones
